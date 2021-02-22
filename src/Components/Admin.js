@@ -50,9 +50,6 @@ export default function Admin() {
           Select multiple pictures, and drop them here to upload
         </FileDrop>
       </div>
-      <button onClick={()=> {
-          axios.get('/api/hello')
-      }}>proxy error?</button>
     </main>
   );
 }

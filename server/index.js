@@ -21,7 +21,6 @@ app.use(
   })
 );
 
-app.get("/api/hello", (req, res) => res.sendStatus(200));
 app.get("/api/signs3", glryCtrl.signs3);
 app.post("/api/gallery", glryCtrl.addToJSON);
 

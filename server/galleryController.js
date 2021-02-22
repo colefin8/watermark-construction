@@ -1,6 +1,6 @@
 const fs = require("fs");
 const AWS = require("aws-sdk");
-const galleryArray = require("./gallery.json");
+const galleryArray = require("../src/gallery.json");
 require("dotenv").config();
 const { AWS_ACCESS_KEY, AWS_SECRET_KEY, BUCKET_NAME } = process.env;
 
@@ -33,7 +33,7 @@ module.exports = {
       };
       galleryArray.push(dataToSend.url);
       fs.writeFile(
-        "server/gallery.json",
+        "src/gallery.json",
         JSON.stringify(galleryArray),
         (err) => {
           if (err) {
